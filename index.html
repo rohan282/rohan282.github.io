@@ -30,10 +30,13 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Overview</a></li>
+							<li class="active"><a href="#main">Overview</a></li>
+							<li><a href="#certifications">Certifications</a></li>
+							<li><a href="#work-experience">Work Experience</a></li>
+							<li><a href="#projects">Projects</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/rohanmadiratta/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/in/rohanmadiratta/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/rohan282" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
@@ -58,7 +61,7 @@
     </article>
 
     <!-- Certifications -->
-    <article class="post featured">
+    <article class="post featured" id="certifications">
         <header class="major">
             <h2>Certifications</h2>  
         </header>
@@ -68,7 +71,7 @@
     </article>
 
     <!-- Work Experience Section -->
-    <article class="post featured">
+    <article class="post featured" id="work-experience">
         <header class="major">
             <h2>Work Experience</h2>
             <span class="date">September 2023 - July 2024</span>
@@ -101,35 +104,35 @@
     </article>
 
     <!-- Projects -->
-    <article class="post featured">
-        <header class="major">
+    <div id="projects">
+        <header class="major" style="margin-bottom: 1rem;">
             <h2>Projects</h2>
         </header>
-    </article>
+        
+        <section class="posts">
+            <article>
+                <header>
+                    <h2><a href="#">Gamer Profile Manager</a></h2>
+                </header>
+                <a href="#" class="image fit"><img src="images/gamerr.jpg" alt="" /></a>
+                <p> Developed a GUI Java application using JavaFX that allows players to submit personal information and details
+                    about the online games they are playing. Implemented an Oracle database to securely store the submitted information, ensuring efficient retrieval and management of user data. Utilized JDBC to perform various database operations.</p>
 
-    <section class="posts">
-        <article>
-            <header>
-                <h2><a href="#">Gamer Profile Manager</a></h2>
-            </header>
-            <a href="#" class="image fit"><img src="images/gamerr.jpg" alt="" /></a>
-            <p> Developed a GUI Java application using JavaFX that allows players to submit personal information and details
-                about the online games they are playing. Implemented an Oracle database to securely store the submitted information, ensuring efficient retrieval and management of user data. Utilized JDBC to perform various database operations.</p>
+            </article>
+            <article>
+                <header>
+                    <h2><a href="#">OpportunityOdyssey</a></h2>
+                </header>
+                <a href="#" class="image fit"><img src="images/Screenshot 2025-01-28 050737.png" alt="" /></a>
+                <p>Developed a comprehensive job portal backend using Spring Boot 3, implementing core functionalities for job seekers and recruiters.
+                Designed a multi-user system with role-based access control using Spring Security for authentication and authorization.
+                Implemented functionalities like job posting, application, and profile management along with job search and resume upload.
+                Utilized Hibernate/JPA for data persistence, managing complex relationships between entities.
+                Integrated Thymeleaf for server-side rendering and MySQL for efficient data storage of interconnected entities</p>
 
-        </article>
-        <article>
-            <header>
-                <h2><a href="#">OpportunityOdyssey</a></h2>
-            </header>
-            <a href="#" class="image fit"><img src="images/Screenshot 2025-01-28 050737.png" alt="" /></a>
-            <p>Developed a comprehensive job portal backend using Spring Boot 3, implementing core functionalities for job seekers and recruiters.
-		    Designed a multi-user system with role-based access control using Spring Security for authentication and authorization.
-		    Implemented functionalities like job posting, application, and profile management along with job search and resume upload.
-		    Utilized Hibernate/JPA for data persistence, managing complex relationships between entities.
-		    Integrated Thymeleaf for server-side rendering and MySQL for efficient data storage of interconnected entities</p>
-
-        </article>
-    </section>
+            </article>
+        </section>
+    </div>
 
 </div>
 
@@ -137,8 +140,9 @@
 					<footer id="footer">
 						<section class="split contact">
 							<section class="alt">
-								<h3>3800 SW 34th Street</h3>
-								<p>Florida, USA</p>
+								<h3>Address</h3>
+								<p>3800 SW 34th Street<br>
+								Gainesville, Florida, USA</p>
 							</section>
 
 							<section>
@@ -207,6 +211,20 @@
 
 .about-content p:last-child {
     margin-bottom: 0;
+}
+
+/* Navigation smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Projects section reduced spacing */
+#projects {
+    margin-top: 2rem;
+}
+
+#projects .major {
+    margin-bottom: 1rem !important;
 }
 
 /* Responsive adjustments */
