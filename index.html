@@ -104,21 +104,12 @@
     </article>
 
     <!-- Projects -->
-    <div id="projects">
-        <header class="major" style="margin-bottom: 1rem;">
+    <article class="post featured" id="projects">
+        <header class="major">
             <h2>Projects</h2>
         </header>
         
         <section class="posts">
-            <article>
-                <header>
-                    <h2><a href="#">Gamer Profile Manager</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/gamerr.jpg" alt="" /></a>
-                <p> Developed a GUI Java application using JavaFX that allows players to submit personal information and details
-                    about the online games they are playing. Implemented an Oracle database to securely store the submitted information, ensuring efficient retrieval and management of user data. Utilized JDBC to perform various database operations.</p>
-
-            </article>
             <article>
                 <header>
                     <h2><a href="#">OpportunityOdyssey</a></h2>
@@ -131,8 +122,17 @@
                 Integrated Thymeleaf for server-side rendering and MySQL for efficient data storage of interconnected entities</p>
 
             </article>
+            <article>
+                <header>
+                    <h2><a href="#">Gamer Profile Manager</a></h2>
+                </header>
+                <a href="#" class="image fit"><img src="images/gamerr.jpg" alt="" /></a>
+                <p> Developed a GUI Java application using JavaFX that allows players to submit personal information and details
+                    about the online games they are playing. Implemented an Oracle database to securely store the submitted information, ensuring efficient retrieval and management of user data. Utilized JDBC to perform various database operations.</p>
+
+            </article>
         </section>
-    </div>
+    </article>
 
 </div>
 
@@ -216,15 +216,6 @@
 /* Navigation smooth scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-/* Projects section reduced spacing */
-#projects {
-    margin-top: 2rem;
-}
-
-#projects .major {
-    margin-bottom: 1rem !important;
 }
 
 /* Responsive adjustments */
