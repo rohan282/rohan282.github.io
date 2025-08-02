@@ -5,6 +5,7 @@
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -4685,5 +4686,66 @@ input, select, textarea {
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
+		/* Work Experience Section Styles */
+.experience-content {
+    padding: 1.5rem 0;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.experience-list li {
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #18bfef;
+    border-radius: 0 5px 5px 0;
+    line-height: 1.6;
+}
+
+.experience-list li strong {
+    color: #18bfef;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.skills-used {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-used h4 {
+    color: #18bfef;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skills-used p {
+    margin: 0.5rem 0;
+    line-height: 1.7;
+}
+
+.skills-used strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+    .experience-list li {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skills-used {
+        padding: 1rem;
+    }
+}
 
 	}
