@@ -45,24 +45,26 @@
     <article class="post featured">
         <header class="major">
             <h2><a href="#">Rohan&nbsp;Madiratta</a></h2>
-            <p>As a proud student of UFL, class of 2026, I am passionate about software development, especially in Java. I have a strong foundation in cloud computing and cybersecurity, with practical experience in AWS services and penetration testing tools.
+            <div class="about-content">
+                <p>I'm currently pursuing my Master's in Computer Science at the University of Florida, where I focus on two complementary areas that define my professional passion: cybersecurity and backend development. The intersection of these fields excites me because it combines the technical complexity of building robust systems with the strategic mindset needed to secure them against evolving threats.</p>
 
-I have earned several certifications in both domains and helped several firms improve their security posture by detecting and resolving potential threats. I am committed to continuous learning and staying updated with the latest technologies.
+                <p>My development work centers around Java, where I enjoy creating scalable backend solutions and tackling challenging problems in data structures and algorithms. There's something deeply satisfying about architecting clean, efficient code that can handle complex business logic while maintaining performance at scale.</p>
 
-I am always eager to connect with like-minded professionals and explore opportunities where I can apply my skills to solve complex problems and contribute to the ever-evolving landscape of technology.
+                <p>In cybersecurity, I'm particularly drawn to penetration testing, with expertise spanning web applications and Active Directory environments. I've been recognized for my security research, having received acknowledgments from major organizations including KFC, Hewlett-Packard, and government entities for responsibly disclosing critical vulnerabilities. This passion led me to play a key role in a critical project at Deloitte, where I performed Security Architecture Reviews for 20+ enterprise applications during a major infrastructure migration, ensuring security standards were maintained throughout the transformation.</p>
 
-Feel free to reach out to me here or at rohanmadiratta1993@gmail.com for any opportunity in the field of software development.</p>
+                <p>I don't claim to have all the answers, but I approach every challenge with genuine curiosity and an eagerness to learn. I live by the motto "more to grow, more to be" – believing that every experience, whether success or setback, presents an opportunity to expand not just my technical skills, but who I am as a professional and person. My drive for continuous improvement and pursuit of excellence keeps me exploring new technologies, methodologies, and perspectives, always looking for opportunities to contribute meaningfully to the teams I work with.</p>
+            </div>
         </header>
-        
-        <!-- Certifications -->
-        <header>
+    </article>
+
+    <!-- Certifications -->
+    <article class="post featured">
+        <header class="major">
             <h2>Certifications</h2>  
         </header>
-
         <a href="#" class="image main"><img src="images/crtppic.png" alt="" /></a>
         <a href="#" class="image main"><img src="images/ewpt.png" alt="" /></a>
         <a href="#" class="image main"><img src="images/ejpt.png" alt="" /></a>
-
     </article>
 
     <!-- Work Experience Section -->
@@ -73,7 +75,6 @@ Feel free to reach out to me here or at rohanmadiratta1993@gmail.com for any opp
             <h3><a href="#">Analyst</a></h3>
             <p>Deloitte USI, Gurgaon, India</p>
         </header>
-        <a href="#" class="image main"><img src="images/deloitte-logo.png" alt="Deloitte Logo" /></a>
         <div class="work-content">
             <ul class="work-highlights">
                 <li>
@@ -100,9 +101,11 @@ Feel free to reach out to me here or at rohanmadiratta1993@gmail.com for any opp
     </article>
 
     <!-- Projects -->
-    <header>
-        <h2>Projects</h2>
-    </header>
+    <article class="post featured">
+        <header class="major">
+            <h2>Projects</h2>
+        </header>
+    </article>
 
     <section class="posts">
         <article>
@@ -195,6 +198,17 @@ Feel free to reach out to me here or at rohanmadiratta1993@gmail.com for any opp
     font-weight: 600;
 }
 
+/* About section styling */
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 736px) {
     .work-highlights li {
@@ -204,6 +218,10 @@ Feel free to reach out to me here or at rohanmadiratta1993@gmail.com for any opp
     
     .work-highlights li strong {
         font-size: 1rem;
+    }
+    
+    .about-content p {
+        margin-bottom: 1.2rem;
     }
 }
 </style>
