@@ -117,11 +117,9 @@
                 </header>
                 <a href="#" class="image fit"><img src="images/Screenshot 2025-01-28 050737.png" alt="" /></a>
                 <div class="project-description">
-                    <p>I developed OpportunityOdyssey as a comprehensive job portal using Spring Boot 3, implementing role-based access control to serve both job seekers and recruiters effectively. The platform features advanced job search filters and resume upload functionality, enabling seamless job applications and candidate management.</p>
+                    <p><strong>Technologies:</strong> Java, Spring Boot 3, Spring MVC, Spring Security, Hibernate, MySQL, Maven</p>
                     
-                    <p>The system includes robust features for job posting and application tracking, allowing recruiters to view detailed applicant information and manage their hiring pipeline efficiently. I utilized Hibernate/JPA for reliable data persistence coupled with MySQL for optimized data storage, ensuring scalable performance.</p>
-                    
-                    <p>To create a smooth user experience, I integrated Thymeleaf for server-side rendering and implemented Spring Security for comprehensive authentication and authorization, making the platform both user-friendly and secure.</p>
+                    <p>Developed a comprehensive job portal using Spring Boot 3 with role-based access control for job seekers and recruiters. Implemented advanced job search filters and resume upload functionality for job applications. Implemented features for job posting, application tracking for recruiters to view applicant details, and user profile management.</p>
                 </div>
             </article>
             <article>
@@ -130,11 +128,9 @@
                 </header>
                 <a href="#" class="image fit"><img src="images/quick.jpg" alt="" /></a>
                 <div class="project-description">
-                    <p>QuickCart represents my exploration into RESTful API development, where I built a comprehensive e-commerce solution using Spring Data REST with automated endpoint generation for seamless products, orders, and user management. The architecture focuses on efficiency and scalability through intelligent automation.</p>
+                    <p><strong>Technologies:</strong> Java, Spring Data REST, Hibernate, MySQL, Maven, Apache Tomcat</p>
                     
-                    <p>I implemented sophisticated database relationships, including complex many-to-many mappings between orders and products with proper cascade operations to maintain data integrity. The entity models feature comprehensive validation, bidirectional relationships, and custom field mappings designed for optimal data handling performance.</p>
-                    
-                    <p>The project leverages Maven for streamlined dependency management and Apache Tomcat for reliable deployment, while providing comprehensive CRUD operations through automated REST endpoint generation, creating a robust foundation for e-commerce functionality.</p>
+                    <p>Developed a RESTful e-commerce API using Spring Data REST with automated endpoint generation for products, orders, and user management. Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations. Designed entity models with proper validation, bidirectional relationships, and custom field mappings for efficient data handling.</p>
                 </div>
             </article>
         </section>
@@ -239,6 +235,12 @@
     margin-bottom: 0;
 }
 
+.project-description p strong {
+    color: #18bfef;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 /* Volunteering Section Styles */
 .volunteering-content {
     padding: 1rem 0;
@@ -298,8 +300,22 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Responsive adjustments */
+/* Section Headers Styling - Consistent Size */
+#certifications .major h2,
+#work-experience .major h2,
+#projects .major h2,
+#volunteering .major h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem;
+}
 @media screen and (max-width: 736px) {
+    #certifications .major h2,
+    #work-experience .major h2,
+    #projects .major h2,
+    #volunteering .major h2 {
+        font-size: 1.5rem !important;
+    }
+    
     .work-highlights li {
         padding: 1rem;
         margin-bottom: 1.2rem;
