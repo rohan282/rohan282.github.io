@@ -127,7 +127,7 @@
                 <header>
                     <h2><a href="#">QuickCart</a></h2>
                 </header>
-                <a href="#" class="image fit"><img src="images/quick.jpg" alt="" /></a>
+                <a href="#" class="image fit quickcart-image"><img src="images/quick.jpg" alt="" /></a>
                 <div class="project-description">
                     <p><strong>Technologies:</strong> Java, Spring Data REST, Hibernate, MySQL, Maven, Apache Tomcat</p>
                     
@@ -301,6 +301,30 @@ html {
     scroll-behavior: smooth;
 }
 
+/* QuickCart Image Styling */
+.quickcart-image img {
+    width: 80% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* Certification Images Styling */
+.cert-image img {
+    width: 70% !important;
+    height: auto !important;
+    margin: 0 auto 1.5rem auto !important;
+    display: block !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* Section Headers Styling - Consistent Size */
 #certifications .major h2,
 #work-experience .major h2,
@@ -310,6 +334,10 @@ html {
     margin-bottom: 1rem;
 }
 @media screen and (max-width: 736px) {
+    .cert-image img {
+        width: 85% !important;
+    }
+    
     #certifications .major h2,
     #work-experience .major h2,
     #projects .major h2,
