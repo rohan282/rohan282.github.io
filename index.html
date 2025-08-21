@@ -116,26 +116,26 @@
                     <h2><a href="#">OpportunityOdyssey</a></h2>
                 </header>
                 <a href="#" class="image fit"><img src="images/Screenshot 2025-01-28 050737.png" alt="" /></a>
-                <ul class="project-points">
-                    <li>Developed a comprehensive job portal using Spring Boot 3 with role-based access control for job seekers and recruiters</li>
-                    <li>Implemented advanced job search filters and resume upload functionality for job applications</li>
-                    <li>Created features for job posting, application tracking for recruiters to view applicant details, and user profile management</li>
-                    <li>Utilized Hibernate/JPA for data persistence and MySQL for efficient data storage</li>
-                    <li>Integrated Thymeleaf for server-side rendering and Spring Security for authentication</li>
-                </ul>
+                <div class="project-description">
+                    <p>I developed OpportunityOdyssey as a comprehensive job portal using Spring Boot 3, implementing role-based access control to serve both job seekers and recruiters effectively. The platform features advanced job search filters and resume upload functionality, enabling seamless job applications and candidate management.</p>
+                    
+                    <p>The system includes robust features for job posting and application tracking, allowing recruiters to view detailed applicant information and manage their hiring pipeline efficiently. I utilized Hibernate/JPA for reliable data persistence coupled with MySQL for optimized data storage, ensuring scalable performance.</p>
+                    
+                    <p>To create a smooth user experience, I integrated Thymeleaf for server-side rendering and implemented Spring Security for comprehensive authentication and authorization, making the platform both user-friendly and secure.</p>
+                </div>
             </article>
             <article>
                 <header>
                     <h2><a href="#">QuickCart</a></h2>
                 </header>
-                <a href="#" class="image fit"><img src="images/quickcart.jpg" alt="" /></a>
-                <ul class="project-points">
-                    <li>Developed a RESTful e-commerce API using Spring Data REST with automated endpoint generation for products, orders, and user management</li>
-                    <li>Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations</li>
-                    <li>Designed entity models with proper validation, bidirectional relationships, and custom field mappings for efficient data handling</li>
-                    <li>Utilized Maven for dependency management and Apache Tomcat for deployment</li>
-                    <li>Implemented comprehensive CRUD operations with automated REST endpoint generation</li>
-                </ul>
+                <a href="#" class="image fit"><img src="images/quick.jpg" alt="" /></a>
+                <div class="project-description">
+                    <p>QuickCart represents my exploration into RESTful API development, where I built a comprehensive e-commerce solution using Spring Data REST with automated endpoint generation for seamless products, orders, and user management. The architecture focuses on efficiency and scalability through intelligent automation.</p>
+                    
+                    <p>I implemented sophisticated database relationships, including complex many-to-many mappings between orders and products with proper cascade operations to maintain data integrity. The entity models feature comprehensive validation, bidirectional relationships, and custom field mappings designed for optimal data handling performance.</p>
+                    
+                    <p>The project leverages Maven for streamlined dependency management and Apache Tomcat for reliable deployment, while providing comprehensive CRUD operations through automated REST endpoint generation, creating a robust foundation for e-commerce functionality.</p>
+                </div>
             </article>
         </section>
     </article>
@@ -223,30 +223,20 @@
     font-weight: 600;
 }
 
-/* Project Points Styling */
-.project-points {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+/* Project Description Styling */
+.project-description {
     text-align: left;
+    padding: 1rem 0;
 }
 
-.project-points li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.2rem;
-    position: relative;
-    line-height: 1.5;
-    text-align: left;
+.project-description p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    text-align: justify;
 }
 
-.project-points li:before {
-    content: "•";
-    color: #18bfef;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1rem;
-    font-weight: bold;
+.project-description p:last-child {
+    margin-bottom: 0;
 }
 
 /* Volunteering Section Styles */
@@ -331,9 +321,8 @@ html {
         font-size: 1.2rem;
     }
     
-    .project-points li {
-        margin-bottom: 0.4rem;
-        padding-left: 1rem;
+    .project-description p {
+        margin-bottom: 1rem;
     }
 }
 </style>
