@@ -24,7 +24,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">WECLOME!</a>
+						<a href="index.html" class="logo">WELCOME!</a>
 					</header>
 
 				<!-- Nav -->
@@ -34,6 +34,7 @@
 							<li><a href="#certifications">Certifications</a></li>
 							<li><a href="#work-experience">Work Experience</a></li>
 							<li><a href="#projects">Projects</a></li>
+							<li><a href="#volunteering">Volunteering</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/rohanmadiratta/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -115,23 +116,43 @@
                     <h2><a href="#">OpportunityOdyssey</a></h2>
                 </header>
                 <a href="#" class="image fit"><img src="images/Screenshot 2025-01-28 050737.png" alt="" /></a>
-                <p>Developed a comprehensive job portal backend using Spring Boot 3, implementing core functionalities for job seekers and recruiters.
-                Designed a multi-user system with role-based access control using Spring Security for authentication and authorization.
-                Implemented functionalities like job posting, application, and profile management along with job search and resume upload.
-                Utilized Hibernate/JPA for data persistence, managing complex relationships between entities.
-                Integrated Thymeleaf for server-side rendering and MySQL for efficient data storage of interconnected entities</p>
-
+                <ul class="project-points">
+                    <li>Developed a comprehensive job portal using Spring Boot 3 with role-based access control for job seekers and recruiters</li>
+                    <li>Implemented advanced job search filters and resume upload functionality for job applications</li>
+                    <li>Created features for job posting, application tracking for recruiters to view applicant details, and user profile management</li>
+                    <li>Utilized Hibernate/JPA for data persistence and MySQL for efficient data storage</li>
+                    <li>Integrated Thymeleaf for server-side rendering and Spring Security for authentication</li>
+                </ul>
             </article>
             <article>
                 <header>
-                    <h2><a href="#">Gamer Profile Manager</a></h2>
+                    <h2><a href="#">QuickCart</a></h2>
                 </header>
-                <a href="#" class="image fit"><img src="images/gamerr.jpg" alt="" /></a>
-                <p> Developed a GUI Java application using JavaFX that allows players to submit personal information and details
-                    about the online games they are playing. Implemented an Oracle database to securely store the submitted information, ensuring efficient retrieval and management of user data. Utilized JDBC to perform various database operations.</p>
-
+                <a href="#" class="image fit"><img src="images/quickcart.jpg" alt="" /></a>
+                <ul class="project-points">
+                    <li>Developed a RESTful e-commerce API using Spring Data REST with automated endpoint generation for products, orders, and user management</li>
+                    <li>Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations</li>
+                    <li>Designed entity models with proper validation, bidirectional relationships, and custom field mappings for efficient data handling</li>
+                    <li>Utilized Maven for dependency management and Apache Tomcat for deployment</li>
+                    <li>Implemented comprehensive CRUD operations with automated REST endpoint generation</li>
+                </ul>
             </article>
         </section>
+    </article>
+
+    <!-- Volunteering -->
+    <article class="post featured" id="volunteering">
+        <header class="major">
+            <h2>Volunteering</h2>
+        </header>
+        <div class="volunteering-content">
+            <div class="volunteer-item">
+                <h3>BSides Orlando</h3>
+                <span class="date">September 2025 (Upcoming)</span>
+                <p>I will be volunteering at BSides Orlando, a community-driven cybersecurity conference that brings together security professionals, researchers, and enthusiasts. BSides conferences are known for providing a platform for sharing cutting-edge security research, fostering networking opportunities, and building the cybersecurity community.</p>
+                <p>As a volunteer, I'll be contributing to the success of this important cybersecurity event while gaining valuable experience in event coordination and expanding my professional network within the security community.</p>
+            </div>
+        </div>
     </article>
 
 </div>
@@ -202,6 +223,72 @@
     font-weight: 600;
 }
 
+/* Project Points Styling */
+.project-points {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.project-points li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.project-points li:before {
+    content: "▶";
+    color: #18bfef;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8rem;
+}
+
+/* Volunteering Section Styles */
+.volunteering-content {
+    padding: 1rem 0;
+}
+
+.volunteer-item {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #18bfef;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.volunteer-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.volunteer-item h3 {
+    color: #18bfef;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.volunteer-item .date {
+    color: #999;
+    font-style: italic;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.volunteer-item p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.volunteer-item p:last-child {
+    margin-bottom: 0;
+}
+
 /* About section styling */
 .about-content p {
     margin-bottom: 1.5rem;
@@ -232,6 +319,18 @@ html {
     .about-content p {
         margin-bottom: 1.2rem;
     }
+    
+    .volunteer-item {
+        padding: 1.2rem;
+    }
+    
+    .volunteer-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-points li {
+        margin-bottom: 0.7rem;
+        padding-left: 1.2rem;
+    }
 }
 </style>
-
