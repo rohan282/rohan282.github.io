@@ -11,11 +11,34 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #252525;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --text-white: #fff;
+            --accent: #ff6b6b;
+            --border: #2a2a2a;
+        }
+        
+        [data-theme="light"] {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8e8e8;
+            --text-primary: #2a2a2a;
+            --text-secondary: #666666;
+            --text-white: #1a1a1a;
+            --accent: #ff6b6b;
+            --border: #e0e0e0;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
         }
         
         .container {
@@ -24,29 +47,51 @@
             min-height: 100vh;
         }
         
-        /* Sidebar */
         .sidebar {
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 2rem 1.5rem;
-            border-right: 1px solid #2a2a2a;
+            border-right: 1px solid var(--border);
             position: sticky;
             top: 0;
             height: 100vh;
             overflow-y: auto;
+            transition: background 0.3s;
         }
         
         .sidebar-header {
             margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #2a2a2a;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .sidebar-header h3 {
-            color: #fff;
+            color: var(--text-white);
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             opacity: 0.7;
+        }
+        
+        .theme-toggle {
+            background: var(--bg-tertiary);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(20deg);
+            background: var(--accent);
         }
         
         .nav-tabs {
@@ -62,7 +107,7 @@
             padding: 0.9rem 1rem;
             background: transparent;
             border: none;
-            color: #a0a0a0;
+            color: var(--text-secondary);
             text-align: left;
             cursor: pointer;
             border-radius: 8px;
@@ -74,21 +119,20 @@
         }
         
         .nav-tab button:hover {
-            background: #252525;
-            color: #fff;
+            background: var(--bg-tertiary);
+            color: var(--text-white);
         }
         
         .nav-tab button.active {
-            background: #2a2a2a;
-            color: #fff;
-            border-left: 3px solid #ff6b6b;
+            background: var(--bg-tertiary);
+            color: var(--text-white);
+            border-left: 3px solid var(--accent);
         }
         
         .nav-icon {
             font-size: 1.2rem;
         }
         
-        /* Main Content */
         .main-content {
             padding: 3rem 4rem;
             overflow-y: auto;
@@ -108,36 +152,39 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Personal Info Section */
         .profile-card {
             display: grid;
             grid-template-columns: 300px 1fr;
             gap: 3rem;
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 2.5rem;
             border-radius: 12px;
             margin-bottom: 2rem;
+            transition: background 0.3s;
         }
         
         .profile-image {
             width: 100%;
             height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .profile-details h1 {
             font-size: 2.5rem;
-            color: #fff;
+            color: var(--text-white);
             margin-bottom: 0.5rem;
         }
         
         .profile-tagline {
-            color: #ff6b6b;
+            color: var(--accent);
             font-size: 1.1rem;
             margin-bottom: 2rem;
         }
@@ -150,24 +197,25 @@
         }
         
         .info-item {
-            background: #252525;
+            background: var(--bg-tertiary);
             padding: 1.2rem;
             border-radius: 8px;
+            transition: background 0.3s;
         }
         
         .info-label {
-            color: #888;
+            color: var(--text-secondary);
             font-size: 0.85rem;
             margin-bottom: 0.3rem;
         }
         
         .info-value {
-            color: #fff;
+            color: var(--text-white);
             font-size: 1rem;
         }
         
         .info-value a {
-            color: #ff6b6b;
+            color: var(--accent);
             text-decoration: none;
         }
         
@@ -175,18 +223,16 @@
             text-decoration: underline;
         }
         
-        /* Section Headers */
         .section-header {
             margin-bottom: 2rem;
         }
         
         .section-header h2 {
             font-size: 2rem;
-            color: #fff;
+            color: var(--text-white);
             margin-bottom: 0.5rem;
         }
         
-        /* Education Cards */
         .education-list, .experience-list {
             display: flex;
             flex-direction: column;
@@ -194,10 +240,11 @@
         }
         
         .edu-card, .exp-card {
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 2rem;
             border-radius: 12px;
-            border-left: 4px solid #ff6b6b;
+            border-left: 4px solid var(--accent);
+            transition: background 0.3s;
         }
         
         .edu-header, .exp-header {
@@ -208,28 +255,28 @@
         }
         
         .edu-header h3, .exp-header h3 {
-            color: #fff;
+            color: var(--text-white);
             font-size: 1.4rem;
         }
         
         .edu-period, .exp-period {
-            color: #888;
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
         
         .edu-degree, .exp-role {
-            color: #ff6b6b;
+            color: var(--accent);
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
         
         .edu-location, .exp-location {
-            color: #aaa;
+            color: var(--text-secondary);
             font-size: 0.95rem;
         }
         
         .gpa {
-            color: #aaa;
+            color: var(--text-secondary);
             font-size: 0.9rem;
             margin-top: 0.5rem;
         }
@@ -240,7 +287,7 @@
         }
         
         .exp-bullets li {
-            color: #ccc;
+            color: var(--text-primary);
             padding-left: 1.5rem;
             margin-bottom: 0.8rem;
             position: relative;
@@ -250,11 +297,10 @@
             content: "▹";
             position: absolute;
             left: 0;
-            color: #ff6b6b;
+            color: var(--accent);
             font-weight: bold;
         }
         
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -262,13 +308,14 @@
         }
         
         .skill-category {
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 1.8rem;
             border-radius: 12px;
+            transition: background 0.3s;
         }
         
         .skill-category h3 {
-            color: #ff6b6b;
+            color: var(--accent);
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
@@ -280,14 +327,14 @@
         }
         
         .skill-tag {
-            background: #252525;
-            color: #fff;
+            background: var(--bg-tertiary);
+            color: var(--text-white);
             padding: 0.5rem 1rem;
             border-radius: 6px;
             font-size: 0.9rem;
+            transition: background 0.3s;
         }
         
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -295,30 +342,30 @@
         }
         
         .project-card {
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 2rem;
             border-radius: 12px;
-            border-top: 3px solid #ff6b6b;
+            border-top: 3px solid var(--accent);
+            transition: background 0.3s;
         }
         
         .project-card h3 {
-            color: #fff;
+            color: var(--text-white);
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
         
         .project-tech {
-            color: #ff6b6b;
+            color: var(--accent);
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
         
         .project-card p {
-            color: #ccc;
+            color: var(--text-primary);
             margin-bottom: 0.8rem;
         }
         
-        /* Certifications */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -326,16 +373,16 @@
         }
         
         .cert-card {
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 1.5rem;
             border-radius: 12px;
             text-align: center;
-            border: 2px solid #2a2a2a;
+            border: 2px solid var(--border);
             transition: all 0.3s;
         }
         
         .cert-card:hover {
-            border-color: #ff6b6b;
+            border-color: var(--accent);
             transform: translateY(-5px);
         }
         
@@ -345,17 +392,16 @@
         }
         
         .cert-card h3 {
-            color: #fff;
+            color: var(--text-white);
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
         
         .cert-issuer {
-            color: #888;
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
         
-        /* Achievements */
         .achievements-list {
             display: flex;
             flex-direction: column;
@@ -363,20 +409,140 @@
         }
         
         .achievement-card {
-            background: #1a1a1a;
+            background: var(--bg-secondary);
             padding: 2rem;
             border-radius: 12px;
-            border-left: 4px solid #ff6b6b;
+            border-left: 4px solid var(--accent);
+            transition: background 0.3s;
         }
         
         .achievement-card h3 {
-            color: #fff;
+            color: var(--text-white);
             font-size: 1.3rem;
             margin-bottom: 1rem;
         }
         
         .achievement-card p {
-            color: #ccc;
+            color: var(--text-primary);
+        }
+        
+        .resume-viewer {
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: background 0.3s;
+        }
+        
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .resume-header h2 {
+            color: var(--text-white);
+            font-size: 2rem;
+        }
+        
+        .download-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .resume-content {
+            background: var(--bg-primary);
+            padding: 3rem;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 0 auto;
+            transition: background 0.3s;
+        }
+        
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .resume-section h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .resume-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-item-header strong {
+            color: var(--text-white);
+            font-size: 1.1rem;
+        }
+        
+        .resume-item-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .resume-item-subtitle {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .resume-item-location {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-item ul {
+            margin-left: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .resume-item li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .resume-skill-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-skill-item strong {
+            color: var(--text-white);
+            display: block;
+            margin-bottom: 0.3rem;
         }
         
         @media (max-width: 1024px) {
@@ -388,7 +554,7 @@
                 position: relative;
                 height: auto;
                 border-right: none;
-                border-bottom: 1px solid #2a2a2a;
+                border-bottom: 1px solid var(--border);
             }
             
             .main-content {
@@ -396,6 +562,10 @@
             }
             
             .profile-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -407,6 +577,9 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h3>🔒 Identity Areas</h3>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    🌙
+                </button>
             </div>
             <nav>
                 <ul class="nav-tabs">
@@ -452,6 +625,12 @@
                             Achievements
                         </button>
                     </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="resume">
+                            <span class="nav-icon">📄</span>
+                            Download Resume
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -461,7 +640,10 @@
             <!-- Personal Information -->
             <section class="content-section active" data-section="personal">
                 <div class="profile-card">
-                    <div class="profile-image">👨‍💻</div>
+                    <div class="profile-image">
+                        <!-- Replace 'your-photo.jpg' with your actual photo filename -->
+                        <img src="photo.png" alt="Rohan Madiratta">
+                    </div>
                     <div class="profile-details">
                         <h1>Rohan Madiratta</h1>
                         <p class="profile-tagline">Application Security | Cloud Security | DevSecOps</p>
@@ -534,6 +716,221 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Achievements -->
+            <section class="content-section" data-section="achievements">
+                <div class="section-header">
+                    <h2>Security Contributions</h2>
+                </div>
+                <div class="achievements-list">
+                    <div class="achievement-card">
+                        <h3>🎤 Volunteer, BSides St. Pete</h3>
+                        <p>Selected to volunteer at premier regional cybersecurity conference, contributing to community engagement and event support.</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <h3>🔍 Vulnerability Discovery and Responsible Disclosure</h3>
+                        <p>Identified and responsibly reported critical security vulnerabilities to major organizations, including KFC, Gevme, Rollbar, Hewlett-Packard, and NCIIPC (National Critical Information Infrastructure Protection Centre).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Download -->
+            <section class="content-section" data-section="resume">
+                <div class="resume-viewer">
+                    <div class="resume-header">
+                        <h2>Resume</h2>
+                        <button class="download-btn" onclick="window.open('Rohan_Madiratta_Resume.pdf', '_blank')">
+                            <span>📥</span>
+                            Download Resume
+                        </button>
+                    </div>
+                    
+                    <div class="resume-content">
+                        <!-- Contact -->
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <h1 style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 0.5rem;">Rohan Madiratta</h1>
+                            <p style="color: var(--text-secondary);">
+                                +1 (352) 709-2032 | rohanmadiratta1993@gmail.com | 
+                                <a href="https://linkedin.com/in/rohanmadiratta/" style="color: var(--accent);">linkedin.com/in/rohanmadiratta</a> | 
+                                <a href="https://github.com/rohan282" style="color: var(--accent);">github.com/rohan282</a>
+                            </p>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="resume-section">
+                            <h3>Education</h3>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>University of Florida</strong>
+                                    <span class="resume-item-date">August 2024 - May 2026 (expected)</span>
+                                </div>
+                                <div class="resume-item-subtitle">Master of Science, Computer Science</div>
+                                <div class="resume-item-location">Gainesville, FL | GPA: 3.61/4.0</div>
+                            </div>
+                            
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>Vellore Institute of Technology</strong>
+                                    <span class="resume-item-date">August 2019 - August 2023</span>
+                                </div>
+                                <div class="resume-item-subtitle">Bachelor of Technology, Information Technology</div>
+                                <div class="resume-item-location">Vellore, India | GPA: 7.84/10.0</div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="resume-section">
+                            <h3>Experience</h3>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>Deloitte USI</strong>
+                                    <span class="resume-item-date">September 2023 - July 2024</span>
+                                </div>
+                                <div class="resume-item-subtitle">Security Software Engineer</div>
+                                <div class="resume-item-location">Gurgaon, India</div>
+                                <ul>
+                                    <li>Conducted Security Architecture Reviews (SAR) for 20+ enterprise applications including SAP systems, Corporate Treasury, Moody's Risk Frontier, Legal Entity Management System, and SharePoint Online during Corebridge Financial's AIG infrastructure migration</li>
+                                    <li>Accelerated security review cycle time by 25-30% through implementation of standardized 10-point evaluation framework and comprehensive architecture documentation requirements</li>
+                                    <li>Reduced security remediation timeline by 40% by identifying critical vulnerabilities including service account hardcoding, overly permissive firewall rules, missing network monitoring, excessive IAM permissions, and insecure S3 bucket policies before production deployment</li>
+                                    <li>Analyzed complex cloud/hybrid architectures with multi-database integrations (Oracle, Amazon RDS, SQL Server), VPN connectivity, and Power Platform workflows for financial risk management applications</li>
+                                    <li>Assessed business continuity and disaster recovery strategies including RTO/RPO requirements, backup validation procedures, database migration paths (DMS, Aurora replicas), and multi-AZ failover configurations</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Projects -->
+                        <div class="resume-section">
+                            <h3>Projects</h3>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>OpportunityOdyssey</strong>
+                                </div>
+                                <div class="resume-item-subtitle">Java, Spring Boot 3, Spring MVC, Spring Security, Hibernate, MySQL, Maven</div>
+                                <ul>
+                                    <li>Developed a comprehensive job portal with role-based access control for job seekers and recruiters</li>
+                                    <li>Implemented advanced job search filters and resume upload functionality for job seekers, and job posting features for recruiters</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>QuickCart</strong>
+                                </div>
+                                <div class="resume-item-subtitle">Java, Spring Data REST, Hibernate, MySQL, Maven, Apache Tomcat</div>
+                                <ul>
+                                    <li>Developed a RESTful e-commerce API with automated endpoint generation for products, orders, and user management</li>
+                                    <li>Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Technical Skills -->
+                        <div class="resume-section">
+                            <h3>Technical Skills</h3>
+                            <div class="resume-skills">
+                                <div class="resume-skill-item">
+                                    <strong>Languages:</strong> Java, SQL, PowerShell
+                                </div>
+                                <div class="resume-skill-item">
+                                    <strong>Frameworks & Libraries:</strong> Spring Boot, Hibernate, JPA, Thymeleaf
+                                </div>
+                                <div class="resume-skill-item">
+                                    <strong>Tools & Technologies:</strong> MySQL, Docker, Burp Suite, IntelliJ IDEA, Postman, Git, Metasploit, Nmap
+                                </div>
+                                <div class="resume-skill-item">
+                                    <strong>AWS Services:</strong> EC2, S3, RDS, VPC, IAM, Lambda, ECS, ELB, CloudWatch, Route 53
+                                </div>
+                                <div class="resume-skill-item">
+                                    <strong>Platforms:</strong> AWS, Linux
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="resume-section">
+                            <h3>Certifications</h3>
+                            <div class="resume-item">
+                                <ul>
+                                    <li><strong>Certified Red Team Professional (CRTP)</strong></li>
+                                    <li><strong>eLearnSecurity Web Application Penetration Tester (eWPT)</strong></li>
+                                    <li><strong>AWS Certified Cloud Practitioner (AWS CCP)</strong></li>
+                                    <li><strong>eLearnSecurity Junior Penetration Tester (eJPT)</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Security Contributions -->
+                        <div class="resume-section">
+                            <h3>Security Contributions</h3>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>Volunteer, BSides St. Pete</strong>
+                                </div>
+                                <ul>
+                                    <li>Selected to volunteer at premier regional cybersecurity conference, contributing to community engagement and event support</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <strong>Vulnerability Discovery and Responsible Disclosure</strong>
+                                </div>
+                                <ul>
+                                    <li>Identified and responsibly reported critical security vulnerabilities to major organizations, including KFC, Gevme, Rollbar, Hewlett-Packard, and NCIIPC</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.content-section');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.dataset.tab;
+                
+                // Remove active class from all tabs
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked tab
+                btn.classList.add('active');
+                
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.dataset.section === targetTab) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+    </script>
+</body>
+</html>
 
             <!-- Skills -->
             <section class="content-section" data-section="skills">
@@ -680,48 +1077,3 @@
                         <p>Developed a RESTful e-commerce API with automated endpoint generation for products, orders, and user management.</p>
                         <p>Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations.</p>
                     </div>
-                </div>
-            </section>
-
-            <!-- Achievements -->
-            <section class="content-section" data-section="achievements">
-                <div class="section-header">
-                    <h2>Security Contributions</h2>
-                </div>
-                <div class="achievements-list">
-                    <div class="achievement-card">
-                        <h3>🎤 Volunteer, BSides St. Pete</h3>
-                        <p>Selected to volunteer at premier regional cybersecurity conference, contributing to community engagement and event support.</p>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <h3>🔍 Vulnerability Discovery and Responsible Disclosure</h3>
-                        <p>Identified and responsibly reported critical security vulnerabilities to major organizations, including KFC, Gevme, Rollbar, Hewlett-Packard, and NCIIPC (National Critical Information Infrastructure Protection Centre).</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <script>
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const sections = document.querySelectorAll('.content-section');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const targetTab = btn.dataset.tab;
-                
-                tabBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                    if (section.dataset.section === targetTab) {
-                        section.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
