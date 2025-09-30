@@ -73,37 +73,42 @@
     </article>
 
     <!-- Work Experience Section -->
-    <article class="post featured" id="work-experience">
-        <header class="major">
-            <h2>Work Experience</h2>
-            <span class="date">September 2023 - July 2024</span>
-            <h3><a href="#">Security Software Engineer</a></h3>
-            <p>Deloitte USI, Gurgaon, India</p>
-        </header>
-        <div class="work-content">
-            <ul class="work-highlights">
-                <li>
-                    <strong>Security Architecture Reviews (SAR):</strong> 
-                    Conducted comprehensive security assessments for 20+ enterprise applications including SAP systems, Corporate Treasury, Moody's Risk Frontier, and SharePoint Online during Corebridge Financial's AIG infrastructure migration
-                </li>
-                
-                <li>
-                    <strong>Complex Architecture Analysis:</strong> 
-                    Analyzed multi-database integrations (Oracle, Amazon RDS, SQL Server), VPN connectivity, and Power Platform workflows for financial risk management applications
-                </li>
-                
-                <li>
-                    <strong>Security Controls Evaluation:</strong> 
-                    Evaluated authentication mechanisms and security controls including SAML/OAuth/OIDC integration, Cloudflare DDoS protection, Web Application Firewalls, Okta MFA, and Splunk SIEM logging
-                </li>
-                
-                <li>
-                    <strong>Stakeholder Collaboration:</strong> 
-                    Collaborated with application owners using structured 10-point evaluation framework, providing technical feedback on network segmentation, access management, and regulatory compliance before production deployment
-                </li>
-            </ul>
-        </div>
-    </article>
+<article class="post featured" id="work-experience">
+    <header class="major">
+        <h2>Work Experience</h2>
+        <span class="date">September 2023 - July 2024</span>
+        <h3><a href="#">Security Software Engineer</a></h3>
+        <p>Deloitte USI, Gurgaon, India</p>
+    </header>
+    <div class="work-content">
+        <ul class="work-highlights">
+            <li>
+                <strong>Security Architecture Reviews (SAR):</strong> 
+                Conducted Security Architecture Reviews for 20+ enterprise applications including SAP systems, Corporate Treasury, Moody's Risk Frontier, Legal Entity Management System, and SharePoint Online during Corebridge Financial's AIG infrastructure migration
+            </li>
+            
+            <li>
+                <strong>Process Optimization & Efficiency:</strong> 
+                Accelerated security review cycle time by 25-30% through implementation of standardized 10-point evaluation framework and comprehensive architecture documentation requirements
+            </li>
+            
+            <li>
+                <strong>Vulnerability Identification & Risk Mitigation:</strong> 
+                Reduced security remediation timeline by 40% by identifying critical vulnerabilities including service account hardcoding, overly permissive firewall rules, missing network monitoring, excessive IAM permissions, and insecure S3 bucket policies before production deployment
+            </li>
+            
+            <li>
+                <strong>Complex Architecture Analysis:</strong> 
+                Analyzed complex cloud/hybrid architectures with multi-database integrations (Oracle, Amazon RDS, SQL Server), VPN connectivity, and Power Platform workflows for financial risk management applications
+            </li>
+
+            <li>
+                <strong>Business Continuity & Disaster Recovery:</strong> 
+                Assessed business continuity and disaster recovery strategies including RTO/RPO requirements, backup validation procedures, database migration paths (DMS, Aurora replicas), and multi-AZ failover configurations
+            </li>
+        </ul>
+    </div>
+</article>
 
     <!-- Projects -->
     <article class="post featured" id="projects">
@@ -219,6 +224,18 @@
     font-size: 1.1rem;
     font-weight: 600;
 }
+
+@media screen and (max-width: 736px) {
+    .work-highlights li {
+        padding: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .work-highlights li strong {
+        font-size: 1rem;
+    }
+}
+</style>
 
 /* Project Description Styling */
 .project-description {
@@ -371,3 +388,4 @@ html {
     }
 }
 </style>
+
