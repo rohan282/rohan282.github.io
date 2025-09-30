@@ -1,391 +1,727 @@
-<!DOCTYPE HTML>
-
-<html>
-	<head>
-		<title>Rohan Madiratta</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<div id="intro">
-						<h1>My Portfolio</h1>
-						<p>A showcase of my certifications, projects and my abilities</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">WELCOME!</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="#main">Overview</a></li>
-							<li><a href="#certifications">Certifications</a></li>
-							<li><a href="#work-experience">Work Experience</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#volunteering">Volunteering</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/rohanmadiratta/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/rohan282" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-<div id="main">
-
-    <!-- Featured Post -->
-    <article class="post featured">
-        <header class="major">
-            <h2><a href="#">Rohan&nbsp;Madiratta</a></h2>
-            <div class="about-content">
-                <p>I'm currently pursuing my Master's in Computer Science at the University of Florida, where I focus on two complementary areas that define my professional passion: cybersecurity and backend development. The intersection of these fields excites me because it combines the technical complexity of building robust systems with the strategic mindset needed to secure them against evolving threats.</p>
-
-                <p>My development work centers around Java, where I enjoy creating scalable backend solutions and tackling challenging problems in data structures and algorithms. There's something deeply satisfying about architecting clean, efficient code that can handle complex business logic while maintaining performance at scale.</p>
-
-                <p>In cybersecurity, I'm particularly drawn to penetration testing, with expertise spanning web applications and Active Directory environments. I've been recognized for my security research, having received acknowledgments from major organizations including KFC, Hewlett-Packard, and government entities for responsibly disclosing critical vulnerabilities. This passion led me to play a key role in a critical project at Deloitte, where I performed Security Architecture Reviews for 20+ enterprise applications during a major infrastructure migration, ensuring security standards were maintained throughout the transformation.</p>
-
-                <p>I don't claim to have all the answers, but I approach every challenge with genuine curiosity and an eagerness to learn. I live by the motto "more to grow, more to be" – believing that every experience, whether success or setback, presents an opportunity to expand not just my technical skills, but who I am as a professional and person. My drive for continuous improvement and pursuit of excellence keeps me exploring new technologies, methodologies, and perspectives, always looking for opportunities to contribute meaningfully to the teams I work with.</p>
-            </div>
-        </header>
-    </article>
-
-    <!-- Certifications -->
-    <article class="post featured" id="certifications">
-        <header class="major">
-            <h2>Certifications</h2>  
-        </header>
-        <a href="#" class="image main cert-image"><img src="images/crtppic.png" alt="" /></a>
-        <a href="#" class="image main cert-image"><img src="images/ewpt.png" alt="" /></a>
-        <a href="#" class="image main cert-image"><img src="images/ejpt.png" alt="" /></a>
-        <a href="#" class="image main cert-image"><img src="images/ccp.jpg" alt="" /></a>
-    </article>
-
-    <!-- Work Experience Section -->
-<article class="post featured" id="work-experience">
-    <header class="major">
-        <h2>Work Experience</h2>
-        <span class="date">September 2023 - July 2024</span>
-        <h3><a href="#">Security Software Engineer</a></h3>
-        <p>Deloitte USI, Gurgaon, India</p>
-    </header>
-    <div class="work-content">
-        <ul class="work-highlights">
-            <li>
-                <strong>Security Architecture Reviews (SAR):</strong> 
-                Conducted Security Architecture Reviews for 20+ enterprise applications including SAP systems, Corporate Treasury, Moody's Risk Frontier, Legal Entity Management System, and SharePoint Online during Corebridge Financial's AIG infrastructure migration
-            </li>
-            
-            <li>
-                <strong>Process Optimization & Efficiency:</strong> 
-                Accelerated security review cycle time by 25-30% through implementation of standardized 10-point evaluation framework and comprehensive architecture documentation requirements
-            </li>
-            
-            <li>
-                <strong>Vulnerability Identification & Risk Mitigation:</strong> 
-                Reduced security remediation timeline by 40% by identifying critical vulnerabilities including service account hardcoding, overly permissive firewall rules, missing network monitoring, excessive IAM permissions, and insecure S3 bucket policies before production deployment
-            </li>
-            
-            <li>
-                <strong>Complex Architecture Analysis:</strong> 
-                Analyzed complex cloud/hybrid architectures with multi-database integrations (Oracle, Amazon RDS, SQL Server), VPN connectivity, and Power Platform workflows for financial risk management applications
-            </li>
-
-            <li>
-                <strong>Business Continuity & Disaster Recovery:</strong> 
-                Assessed business continuity and disaster recovery strategies including RTO/RPO requirements, backup validation procedures, database migration paths (DMS, Aurora replicas), and multi-AZ failover configurations
-            </li>
-        </ul>
-    </div>
-</article>
-
-    <!-- Projects -->
-    <article class="post featured" id="projects">
-        <header class="major">
-            <h2>Projects</h2>
-        </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Madiratta - Security Engineer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        <section class="posts">
-            <article>
-                <header>
-                    <h2><a href="#">OpportunityOdyssey</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/Screenshot 2025-01-28 050737.png" alt="" /></a>
-                <div class="project-description">
-                    <p><strong>Technologies:</strong> Java, Spring Boot 3, Spring MVC, Spring Security, Hibernate, MySQL, Maven</p>
-                    
-                    <p>Developed a comprehensive job portal using Spring Boot 3 with role-based access control for job seekers and recruiters. Implemented advanced job search filters and resume upload functionality for job applications. Implemented features for job posting, application tracking for recruiters to view applicant details, and user profile management.</p>
-                </div>
-            </article>
-            <article>
-                <header>
-                    <h2><a href="#">QuickCart</a></h2>
-                </header>
-                <a href="#" class="image fit quickcart-image"><img src="images/quick.jpg" alt="" /></a>
-                <div class="project-description">
-                    <p><strong>Technologies:</strong> Java, Spring Data REST, Hibernate, MySQL, Maven, Apache Tomcat</p>
-                    
-                    <p>Developed a RESTful e-commerce API using Spring Data REST with automated endpoint generation for products, orders, and user management. Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations. Designed entity models with proper validation, bidirectional relationships, and custom field mappings for efficient data handling.</p>
-                </div>
-            </article>
-        </section>
-    </article>
-
-    <!-- Volunteering -->
-    <article class="post featured" id="volunteering">
-        <header class="major">
-            <h2>Volunteering</h2>
-        </header>
-        <div class="volunteering-content">
-            <div class="volunteer-item">
-                <h3>BSides Orlando</h3>
-                <span class="date">September 2025 (Upcoming)</span>
-                <p>I will be volunteering at BSides Orlando, a community-driven cybersecurity conference that brings together security professionals, researchers, and enthusiasts. BSides conferences are known for providing a platform for sharing cutting-edge security research, fostering networking opportunities, and building the cybersecurity community.</p>
-                <p>As a volunteer, I'll be contributing to the success of this important cybersecurity event while gaining valuable experience in event coordination and expanding my professional network within the security community.</p>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: #1a1a1a;
+            padding: 2rem 1.5rem;
+            border-right: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .sidebar-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        
+        .sidebar-header h3 {
+            color: #fff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+        
+        .nav-tabs {
+            list-style: none;
+        }
+        
+        .nav-tab {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-tab button {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: transparent;
+            border: none;
+            color: #a0a0a0;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s;
+        }
+        
+        .nav-tab button:hover {
+            background: #252525;
+            color: #fff;
+        }
+        
+        .nav-tab button.active {
+            background: #2a2a2a;
+            color: #fff;
+            border-left: 3px solid #ff6b6b;
+        }
+        
+        .nav-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 3rem 4rem;
+            overflow-y: auto;
+        }
+        
+        .content-section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Personal Info Section */
+        .profile-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            background: #1a1a1a;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+        
+        .profile-details h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-tagline {
+            color: #ff6b6b;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-item {
+            background: #252525;
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+        
+        .info-label {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .info-value {
+            color: #fff;
+            font-size: 1rem;
+        }
+        
+        .info-value a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+        
+        .info-value a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Education Cards */
+        .education-list, .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .edu-card, .exp-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .edu-header, .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        
+        .edu-header h3, .exp-header h3 {
+            color: #fff;
+            font-size: 1.4rem;
+        }
+        
+        .edu-period, .exp-period {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .edu-degree, .exp-role {
+            color: #ff6b6b;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .edu-location, .exp-location {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        .gpa {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .exp-bullets {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .exp-bullets li {
+            color: #ccc;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        .exp-bullets li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background: #1a1a1a;
+            padding: 1.8rem;
+            border-radius: 12px;
+        }
+        
+        .skill-category h3 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        
+        .skill-tag {
+            background: #252525;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 3px solid #ff6b6b;
+        }
+        
+        .project-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tech {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-card p {
+            color: #ccc;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .cert-card {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #2a2a2a;
+            transition: all 0.3s;
+        }
+        
+        .cert-card:hover {
+            border-color: #ff6b6b;
+            transform: translateY(-5px);
+        }
+        
+        .cert-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cert-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cert-issuer {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Achievements */
+        .achievements-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .achievement-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .achievement-card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-card p {
+            color: #ccc;
+        }
+        
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #2a2a2a;
+            }
+            
+            .main-content {
+                padding: 2rem;
+            }
+            
+            .profile-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>🔒 Identity Areas</h3>
             </div>
-        </div>
-    </article>
+            <nav>
+                <ul class="nav-tabs">
+                    <li class="nav-tab">
+                        <button class="tab-btn active" data-tab="personal">
+                            <span class="nav-icon">👤</span>
+                            Personal Information
+                        </button>
+                    </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="education">
+                            <span class="nav-icon">🎓</span>
+                            Education
+                        </button>
+                    </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="skills">
+                            <span class="nav-icon">🛠️</span>
+                            Skills | Tools
+                        </button>
+                    </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="experience">
+                            <span class="nav-icon">💼</span>
+                            Experience
+                        </button>
+                    </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="certifications">
+                            <span class="nav-icon">🏆</span>
+                            Certificates
+                        </button>
+                    </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="projects">
+                            <span class="nav-icon">🚀</span>
+                            Projects
+                        </button>
+                    </li>
+                    <li class="nav-tab">
+                        <button class="tab-btn" data-tab="achievements">
+                            <span class="nav-icon">🌟</span>
+                            Achievements
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-</div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Personal Information -->
+            <section class="content-section active" data-section="personal">
+                <div class="profile-card">
+                    <div class="profile-image">👨‍💻</div>
+                    <div class="profile-details">
+                        <h1>Rohan Madiratta</h1>
+                        <p class="profile-tagline">Application Security | Cloud Security | DevSecOps</p>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">📧 Email</div>
+                                <div class="info-value"><a href="mailto:rohanmadiratta1993@gmail.com">rohanmadiratta1993@gmail.com</a></div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">📱 Phone</div>
+                                <div class="info-value">+1 (352) 709-2032</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">💼 LinkedIn</div>
+                                <div class="info-value"><a href="https://linkedin.com/in/rohanmadiratta/" target="_blank">linkedin.com/in/rohanmadiratta</a></div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">💻 GitHub</div>
+                                <div class="info-value"><a href="https://github.com/rohan282" target="_blank">github.com/rohan282</a></div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">📍 Location</div>
+                                <div class="info-value">Gainesville, FL</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">🎯 Current Role</div>
+                                <div class="info-value">MS in Computer Science Student</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>3800 SW 34th Street<br>
-								Gainesville, Florida, USA</p>
-							</section>
+                <div class="section-header">
+                    <h2>Summary</h2>
+                </div>
+                <div class="achievement-card">
+                    <p>Security Software Engineer with hands-on experience in security architecture reviews, vulnerability assessments, and penetration testing. Proven track record of accelerating security review cycles by 25-30% and reducing remediation timelines by 40% through systematic vulnerability identification. Certified in multiple security domains including Red Team operations and Web Application Penetration Testing. Currently pursuing Master's in Computer Science at University of Florida while building expertise in secure application development and cloud security.</p>
+                </div>
+            </section>
 
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:rohanmadiratta1993@gmail.com">rohanmadiratta1993@gmail.com</a></p>
-							</section>
+            <!-- Education -->
+            <section class="content-section" data-section="education">
+                <div class="section-header">
+                    <h2>Education</h2>
+                </div>
+                <div class="education-list">
+                    <div class="edu-card">
+                        <div class="edu-header">
+                            <div>
+                                <h3>University of Florida</h3>
+                                <p class="edu-degree">Master of Science, Computer Science</p>
+                                <p class="edu-location">📍 Gainesville, FL</p>
+                                <p class="gpa">GPA: 3.61/4.0</p>
+                            </div>
+                            <div class="edu-period">Aug 2024 - May 2026 (expected)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="edu-card">
+                        <div class="edu-header">
+                            <div>
+                                <h3>Vellore Institute of Technology</h3>
+                                <p class="edu-degree">Bachelor of Technology, Information Technology</p>
+                                <p class="edu-location">📍 Vellore, India</p>
+                                <p class="gpa">GPA: 7.84/10.0</p>
+                            </div>
+                            <div class="edu-period">Aug 2019 - Aug 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-						</section>
-					</footer>
+            <!-- Skills -->
+            <section class="content-section" data-section="skills">
+                <div class="section-header">
+                    <h2>Technical Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PowerShell</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Hibernate</span>
+                            <span class="skill-tag">JPA</span>
+                            <span class="skill-tag">Thymeleaf</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Security Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Nmap</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Development Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">IntelliJ IDEA</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>AWS Services</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">EC2</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">RDS</span>
+                            <span class="skill-tag">VPC</span>
+                            <span class="skill-tag">IAM</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag">ECS</span>
+                            <span class="skill-tag">ELB</span>
+                            <span class="skill-tag">CloudWatch</span>
+                            <span class="skill-tag">Route 53</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-			</div>
+            <!-- Experience -->
+            <section class="content-section" data-section="experience">
+                <div class="section-header">
+                    <h2>Professional Experience</h2>
+                </div>
+                <div class="experience-list">
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Deloitte USI</h3>
+                                <p class="exp-role">Security Software Engineer</p>
+                                <p class="exp-location">📍 Gurgaon, India</p>
+                            </div>
+                            <div class="exp-period">Sep 2023 - Jul 2024</div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Conducted Security Architecture Reviews (SAR) for 20+ enterprise applications including SAP systems, Corporate Treasury, Moody's Risk Frontier, Legal Entity Management System, and SharePoint Online during Corebridge Financial's AIG infrastructure migration</li>
+                            <li>Accelerated security review cycle time by 25-30% through implementation of standardized 10-point evaluation framework and comprehensive architecture documentation requirements</li>
+                            <li>Reduced security remediation timeline by 40% by identifying critical vulnerabilities including service account hardcoding, overly permissive firewall rules, missing network monitoring, excessive IAM permissions, and insecure S3 bucket policies before production deployment</li>
+                            <li>Analyzed complex cloud/hybrid architectures with multi-database integrations (Oracle, Amazon RDS, SQL Server), VPN connectivity, and Power Platform workflows for financial risk management applications</li>
+                            <li>Assessed business continuity and disaster recovery strategies including RTO/RPO requirements, backup validation procedures, database migration paths (DMS, Aurora replicas), and multi-AZ failover configurations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <!-- Certifications -->
+            <section class="content-section" data-section="certifications">
+                <div class="section-header">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">🔴</div>
+                        <h3>Certified Red Team Professional</h3>
+                        <p class="cert-issuer">CRTP</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🌐</div>
+                        <h3>Web Application Penetration Tester</h3>
+                        <p class="cert-issuer">eLearnSecurity (eWPT)</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">☁️</div>
+                        <h3>AWS Certified Cloud Practitioner</h3>
+                        <p class="cert-issuer">Amazon Web Services</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🔒</div>
+                        <h3>Junior Penetration Tester</h3>
+                        <p class="cert-issuer">eLearnSecurity (eJPT)</p>
+                    </div>
+                </div>
+            </section>
 
-	</body>
+            <!-- Projects -->
+            <section class="content-section" data-section="projects">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>OpportunityOdyssey</h3>
+                        <p class="project-tech">Java, Spring Boot 3, Spring MVC, Spring Security, Hibernate, MySQL, Maven</p>
+                        <p>Developed a comprehensive job portal with role-based access control for job seekers and recruiters.</p>
+                        <p>Implemented advanced job search filters and resume upload functionality for job seekers, and job posting features for recruiters.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>QuickCart</h3>
+                        <p class="project-tech">Java, Spring Data REST, Hibernate, MySQL, Maven, Apache Tomcat</p>
+                        <p>Developed a RESTful e-commerce API with automated endpoint generation for products, orders, and user management.</p>
+                        <p>Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements -->
+            <section class="content-section" data-section="achievements">
+                <div class="section-header">
+                    <h2>Security Contributions</h2>
+                </div>
+                <div class="achievements-list">
+                    <div class="achievement-card">
+                        <h3>🎤 Volunteer, BSides St. Pete</h3>
+                        <p>Selected to volunteer at premier regional cybersecurity conference, contributing to community engagement and event support.</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <h3>🔍 Vulnerability Discovery and Responsible Disclosure</h3>
+                        <p>Identified and responsibly reported critical security vulnerabilities to major organizations, including KFC, Gevme, Rollbar, Hewlett-Packard, and NCIIPC (National Critical Information Infrastructure Protection Centre).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.content-section');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.dataset.tab;
+                
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.dataset.section === targetTab) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
-
-<style>
-/* Work Experience Section Styles */
-.work-content {
-    padding: 1rem 0;
-}
-
-.work-highlights {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.work-highlights li {
-    margin-bottom: 1.5rem;
-    padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #18bfef;
-    border-radius: 0 8px 8px 0;
-    line-height: 1.7;
-    transition: all 0.3s ease;
-}
-
-.work-highlights li:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateX(5px);
-}
-
-.work-highlights li strong {
-    color: #18bfef;
-    display: block;
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-@media screen and (max-width: 736px) {
-    .work-highlights li {
-        padding: 1rem;
-        margin-bottom: 1.2rem;
-    }
-    
-    .work-highlights li strong {
-        font-size: 1rem;
-    }
-}
-</style>
-
-/* Project Description Styling */
-.project-description {
-    text-align: left;
-    padding: 1rem 0;
-}
-
-.project-description p {
-    margin-bottom: 1.2rem;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-.project-description p:last-child {
-    margin-bottom: 0;
-}
-
-.project-description p strong {
-    color: #18bfef;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-/* Volunteering Section Styles */
-.volunteering-content {
-    padding: 1rem 0;
-}
-
-.volunteer-item {
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #18bfef;
-    border-radius: 0 8px 8px 0;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.volunteer-item:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateX(5px);
-}
-
-.volunteer-item h3 {
-    color: #18bfef;
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.volunteer-item .date {
-    color: #999;
-    font-style: italic;
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.volunteer-item p {
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.volunteer-item p:last-child {
-    margin-bottom: 0;
-}
-
-/* About section styling */
-.about-content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.about-content p:last-child {
-    margin-bottom: 0;
-}
-
-/* Navigation smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* QuickCart Image Styling */
-.quickcart-image img {
-    width: 80% !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    display: block !important;
-}
-
-/* Certification Images Styling */
-.cert-image img {
-    width: 70% !important;
-    height: auto !important;
-    margin: 0 auto 1.5rem auto !important;
-    display: block !important;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cert-image img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Section Headers Styling - Consistent Size */
-#certifications .major h2,
-#work-experience .major h2,
-#projects .major h2,
-#volunteering .major h2 {
-    font-size: 1.8rem !important;
-    margin-bottom: 1rem;
-}
-@media screen and (max-width: 736px) {
-    .cert-image img {
-        width: 85% !important;
-    }
-    
-    #certifications .major h2,
-    #work-experience .major h2,
-    #projects .major h2,
-    #volunteering .major h2 {
-        font-size: 1.5rem !important;
-    }
-    
-    .work-highlights li {
-        padding: 1rem;
-        margin-bottom: 1.2rem;
-    }
-    
-    .work-highlights li strong {
-        font-size: 1rem;
-    }
-    
-    .about-content p {
-        margin-bottom: 1.2rem;
-    }
-    
-    .volunteer-item {
-        padding: 1.2rem;
-    }
-    
-    .volunteer-item h3 {
-        font-size: 1.2rem;
-    }
-    
-    .project-description p {
-        margin-bottom: 1rem;
-    }
-}
-</style>
-
