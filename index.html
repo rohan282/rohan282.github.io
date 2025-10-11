@@ -313,6 +313,7 @@
             background: var(--bg-secondary);
             padding: 1.8rem;
             border-radius: 12px;
+            border-top: 3px solid var(--accent);
             transition: background 0.3s;
         }
         
@@ -346,14 +347,6 @@
         .project-card {
             background: var(--bg-secondary);
             padding: 2rem;
-            border-radius: 12px;
-            border-top: 3px solid var(--accent);
-            transition: background 0.3s;
-        }
-        
-        .skill-category {
-            background: var(--bg-secondary);
-            padding: 1.8rem;
             border-radius: 12px;
             border-top: 3px solid var(--accent);
             transition: background 0.3s;
@@ -494,83 +487,17 @@
             box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
         }
         
-        .resume-content {
-            background: var(--bg-primary);
-            padding: 3rem;
+        .pdf-container {
+            width: 100%;
+            height: 100vh;
             border-radius: 8px;
-            max-width: 900px;
-            margin: 0 auto;
-            transition: background 0.3s;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
-        .resume-section {
-            margin-bottom: 2.5rem;
-        }
-        
-        .resume-section h3 {
-            color: var(--text-white);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--text-primary);
-            padding-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .resume-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .resume-item-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .resume-item-header strong {
-            color: var(--text-white);
-            font-size: 1.1rem;
-        }
-        
-        .resume-item-date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .resume-item-subtitle {
-            color: var(--text-primary);
-            font-size: 0.95rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .resume-item-location {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .resume-item ul {
-            margin-left: 1.5rem;
-            color: var(--text-primary);
-        }
-        
-        .resume-item li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .resume-skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        
-        .resume-skill-item {
-            margin-bottom: 0.5rem;
-        }
-        
-        .resume-skill-item strong {
-            color: var(--text-white);
-            display: block;
-            margin-bottom: 0.3rem;
+        .pdf-container embed {
+            border: none;
         }
         
         @media (max-width: 1024px) {
@@ -604,9 +531,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h3>🔒 Identity Areas</h3>
-                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
-                    🌙
-                </button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
             </div>
             <nav>
                 <ul class="nav-tabs">
@@ -919,122 +844,8 @@
                         </button>
                     </div>
                     
-                    <div class="resume-content">
-                        <div style="text-align: center; margin-bottom: 2rem;">
-                            <h1 style="color: var(--text-white); font-size: 2.5rem; margin-bottom: 0.5rem;">Rohan Madiratta</h1>
-                            <p style="color: var(--text-secondary);">
-                                +1 (352) 709-2032 | rohanmadiratta1993@gmail.com | 
-                                <a href="https://linkedin.com/in/rohanmadiratta/" style="color: var(--text-primary); text-decoration: none;">linkedin.com/in/rohanmadiratta</a> | 
-                                <a href="https://github.com/rohan282" style="color: var(--text-primary); text-decoration: none;">github.com/rohan282</a>
-                            </p>
-                        </div>
-
-                        <div class="resume-section">
-                            <h3>Education</h3>
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>University of Florida</strong>
-                                    <span class="resume-item-date">August 2024 - May 2026 (expected)</span>
-                                </div>
-                                <div class="resume-item-subtitle">Master of Science, Computer Science</div>
-                                <div class="resume-item-location">Gainesville, FL | GPA: 3.61/4.0</div>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>Vellore Institute of Technology</strong>
-                                    <span class="resume-item-date">August 2019 - August 2023</span>
-                                </div>
-                                <div class="resume-item-subtitle">Bachelor of Technology, Information Technology</div>
-                                <div class="resume-item-location">Vellore, India | GPA: 7.84/10.0</div>
-                            </div>
-                        </div>
-
-                        <div class="resume-section">
-                            <h3>Experience</h3>
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>Deloitte USI</strong>
-                                    <span class="resume-item-date">September 2023 - July 2024</span>
-                                </div>
-                                <div class="resume-item-subtitle">Security Software Engineer</div>
-                                <div class="resume-item-location">Gurgaon, India</div>
-                                <ul>
-                                    <li>Conducted Security Architecture Reviews (SAR) for 20+ enterprise applications including SAP systems, Corporate Treasury, Moody's Risk Frontier, Legal Entity Management System, and SharePoint Online during Corebridge Financial's AIG infrastructure migration</li>
-                                    <li>Accelerated security review cycle time by 25-30% through implementation of standardized 10-point evaluation framework and comprehensive architecture documentation requirements</li>
-                                    <li>Reduced security remediation timeline by 40% by identifying critical vulnerabilities including service account hardcoding, overly permissive firewall rules, missing network monitoring, excessive IAM permissions, and insecure S3 bucket policies before production deployment</li>
-                                    <li>Analyzed complex cloud/hybrid architectures with multi-database integrations (Oracle, Amazon RDS, SQL Server), VPN connectivity, and Power Platform workflows for financial risk management applications</li>
-                                    <li>Assessed business continuity and disaster recovery strategies including RTO/RPO requirements, backup validation procedures, database migration paths (DMS, Aurora replicas), and multi-AZ failover configurations</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="resume-section">
-                            <h3>Projects</h3>
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>OpportunityOdyssey</strong>
-                                </div>
-                                <div class="resume-item-subtitle">Java, Spring Boot 3, Spring MVC, Spring Security, Hibernate, MySQL, Maven</div>
-                                <ul>
-                                    <li>Developed a comprehensive job portal with role-based access control for job seekers and recruiters</li>
-                                    <li>Implemented advanced job search filters and resume upload functionality for job seekers, and job posting features for recruiters</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>QuickCart</strong>
-                                </div>
-                                <div class="resume-item-subtitle">Java, Spring Data REST, Hibernate, MySQL, Maven, Apache Tomcat</div>
-                                <ul>
-                                    <li>Developed a RESTful e-commerce API with automated endpoint generation for products, orders, and user management</li>
-                                    <li>Implemented complex database relationships including many-to-many mappings between orders and products with proper cascade operations</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="resume-section">
-                            <h3>Technical Skills</h3>
-                            <p style="margin-bottom: 0.8rem;"><strong>Languages:</strong> Java, SQL, PowerShell</p>
-                            <p style="margin-bottom: 0.8rem;"><strong>Frameworks & Libraries:</strong> Spring Boot, Hibernate, JPA, Thymeleaf</p>
-                            <p style="margin-bottom: 0.8rem;"><strong>Tools & Technologies:</strong> MySQL, Docker, Burp Suite, IntelliJ IDEA, Postman, Git, Metasploit, Nmap</p>
-                            <p style="margin-bottom: 0.8rem;"><strong>AWS Services:</strong> EC2, S3, RDS, VPC, IAM, Lambda, ECS, ELB, CloudWatch, Route 53</p>
-                            <p style="margin-bottom: 0.8rem;"><strong>Platforms:</strong> AWS, Linux</p>
-                        </div>
-
-                        <div class="resume-section">
-                            <h3>Certifications</h3>
-                            <div class="resume-item">
-                                <ul>
-                                    <li><strong>Certified Red Team Professional (CRTP)</strong></li>
-                                    <li><strong>eLearnSecurity Web Application Penetration Tester (eWPT)</strong></li>
-                                    <li><strong>AWS Certified Cloud Practitioner (AWS CCP)</strong></li>
-                                    <li><strong>eLearnSecurity Junior Penetration Tester (eJPT)</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="resume-section">
-                            <h3>Security Contributions</h3>
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>Volunteer, BSides St. Pete</strong>
-                                </div>
-                                <ul>
-                                    <li>Selected to volunteer at premier regional cybersecurity conference, contributing to community engagement and event support</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <div class="resume-item-header">
-                                    <strong>Vulnerability Discovery and Responsible Disclosure</strong>
-                                </div>
-                                <ul>
-                                    <li>Identified and responsibly reported critical security vulnerabilities to major organizations, including KFC, Gevme, Rollbar, Hewlett-Packard, and NCIIPC</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="pdf-container">
+                        <embed src="Rohan_Madiratta_Resume.pdf" type="application/pdf" width="100%" height="100%" />
                     </div>
                 </div>
             </section>
